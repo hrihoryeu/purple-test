@@ -38,6 +38,9 @@ body, p, h1, h2, h3 {
   cursor: pointer;
   height: 48px;
   width: 180px;
+  &:hover {
+    box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 0.51);
+  }
   &-h-lg {
     height: 62px;
   }
@@ -92,6 +95,9 @@ body, p, h1, h2, h3 {
     line-height: 31px;
     background-color: transparent;
     cursor: pointer;
+    &:hover {
+      box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 0.51);
+    }
     &-head {
       font-size: 18px;
     }
@@ -99,13 +105,16 @@ body, p, h1, h2, h3 {
       background-color: #F15B62;
       color: white;
       box-shadow: 0px 4px 14px rgba(241, 91, 98, 0.4);
+      &:hover {
+        box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 0.51);
+      }
     }
   }
 }
 
 .header-container {
   display: grid;
-  grid-template-columns: auto minmax(500px, 1440px) auto;
+  grid-template-columns: auto minmax(300px, 1440px) auto;
 }
 
 .container {
@@ -206,6 +215,9 @@ body, p, h1, h2, h3 {
     padding: 8px;
     text-align: center;
     cursor: pointer;
+    &:hover {
+      box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 0.51);
+    }
   }
   &-cards {
     display: grid;
@@ -236,7 +248,10 @@ body, p, h1, h2, h3 {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 22px
+    gap: 22px;
+    &:hover {
+      box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 0.51);
+    }
   }
   &-cards {
     display: grid;
@@ -282,11 +297,11 @@ body, p, h1, h2, h3 {
   position: relative;
   text-align: center;
   &-img {
-    height: 456px;
-    position: absolute;
-    right: -60px;
+    // height: 456px;
+    // position: absolute;
+    // right: -60px;
     &-scaled {
-      visibility: hidden;
+      visibility: visible;
       width: 100%;
     }
   }
@@ -301,6 +316,10 @@ body, p, h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  &-img {
+    max-width: 585px;
+    width: 100%;
+  }
   &-title {
     text-align: center;
     p {
@@ -325,7 +344,8 @@ body, p, h1, h2, h3 {
   gap: 42px;
   align-items: center;
   img {
-    width: 920px;
+    max-width: 920px;
+    width: 100%;
   }
 }
 
@@ -444,11 +464,107 @@ body, p, h1, h2, h3 {
   margin-right: 60px;
 }
 
-@media (max-width: 1280px) {
-  .bubble-img {
+@media (max-width: 1440px) {
+  .background {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 1133px) {
+  .footer-form-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0 24px;
+  }
+  .footer-info-content {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .footer-contacts-content {
+    gap: 100px;
+  }
+  .mr-60 {
+    margin: 0;
+  }
+  .top-bar {
+    grid-template-columns: 1fr auto;
+    gap: 0 72px;
+  }
+  .sponsor-icon {
     visibility: hidden;
-    &-scaled {
-      visibility: visible;
+    height: 0;
+  }
+  .header {
+    gap: 30px;
+    &-text {
+      width: inherit;
+      h1 {
+        font-size: 54px;
+      }
     }
+  }
+}
+
+@media (max-width: 750px) {
+  .btn-white {
+    justify-self: end;
+  }
+  .footer-form-content {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+    background-image: none;
+    background-color: #d4e0ee;
+    height: inherit;
+    gap: 10px;
+    padding: 17px;
+  }
+  .footer-info-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px
+  }
+  .top-bar {
+    grid-template-columns: 1fr;
+    gap: 0 72px;
+    &-group {
+      visibility: hidden;
+      height: 0;
+      width: 100px;
+    }
+  }
+  .footer-contacts-content {
+    gap: 10px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .header {
+    gap: 10px;
+    &-input-box {
+      width: 80%;
+    }
+    &-text {
+      width: inherit;
+      h1 {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .footer-info-content {
+    grid-template-columns: 1fr;
+  }
+  .granny-girl-buttons {
+    flex-wrap: wrap;
+    padding: 0 17px;
+  }
+  .search {
+    width: 100%;
+  }
+  .header-input-box input {
+    width: 100%;
+  }
+  .footer-contacts-content-left-icons {
+    flex-wrap: wrap;
   }
 }
