@@ -117,7 +117,6 @@ goodToKnowList.map(({ url }) => {
 
 const footerInfo: Element | null = document.querySelector('.footer-info-content')
 footerInfoList.map(({ title, dataList }) => {
-  console.log(title, dataList)
   const box: HTMLDivElement = document.createElement('div')
   const titleEl: HTMLHeadingElement = document.createElement('h3')
   const separatorIcon: HTMLImageElement = document.createElement('img')
@@ -130,7 +129,6 @@ footerInfoList.map(({ title, dataList }) => {
   box.appendChild(separatorIcon)
 
   dataList.map(el => {
-    console.log(el)
     const boxText: HTMLParagraphElement = document.createElement('p')
 
     boxText.innerText = el
