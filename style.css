@@ -324,6 +324,7 @@ body, p, h1, h2, h3 {
   max-width: 540px;
   font-size: 24px;
   line-height: 31px;
+  padding: 0 17px;
 }
 .granny-girl-buttons {
   display: flex;
@@ -542,7 +543,7 @@ body, p, h1, h2, h3 {
   }
   .granny-girl-buttons {
     flex-wrap: wrap;
-    padding: 0 17px;
+    justify-content: center;
   }
   .search {
     width: 100%;
@@ -552,6 +553,9 @@ body, p, h1, h2, h3 {
   }
   .footer-contacts-content-left-icons {
     flex-wrap: wrap;
+  }
+  .btn-red-head {
+    display: none;
   }
 }
 
